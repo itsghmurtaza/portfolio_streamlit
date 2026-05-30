@@ -1,66 +1,44 @@
-from pathlib import Path
-import base64
-import mimetypes
+# Ghulam Murtaza Streamlit Portfolio
 
-import streamlit as st
-import streamlit.components.v1 as components
+This repository converts the supplied one-page HTML portfolio into a Streamlit app while preserving the original HTML structure, CSS styling, layout, and element positioning.
 
+## Repository Structure
 
-APP_DIR = Path(__file__).resolve().parent
-HTML_PATH = APP_DIR / "index.html"
-PHOTO_PATH = APP_DIR / "assets" / "GM_Full.png"
+```text
+.
+├── app.py
+├── index.html
+├── requirements.txt
+├── assets/
+│   └── GM_Full.png
+└── .streamlit/
+    └── config.toml
+```
 
+## Run Locally
 
-def to_data_uri(path: Path) -> str:
-    """Return a browser-safe data URI for a local asset."""
-    mime_type = mimetypes.guess_type(path.name)[0] or "application/octet-stream"
-    encoded = base64.b64encode(path.read_bytes()).decode("utf-8")
-    return f"data:{mime_type};base64,{encoded}"
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
 
+## Deploy on Streamlit Community Cloud
 
-def load_portfolio_html() -> str:
-    """Load the original portfolio HTML and inject the local portrait image."""
-    html = HTML_PATH.read_text(encoding="utf-8")
-    photo_uri = to_data_uri(PHOTO_PATH)
+1. Upload this repository to GitHub.
+2. Open Streamlit Community Cloud.
+3. Select the GitHub repository.
+4. Set the main file path to:
 
-    # The source HTML/CSS/layout is intentionally preserved. Only the local image
-    # reference is replaced so the portfolio works on Streamlit Cloud and GitHub clones.
-    html = html.replace('src="assets/GM_Full.png"', f'src="{photo_uri}"')
-    return html
+```text
+app.py
+```
 
+5. Deploy.
 
-st.set_page_config(
-    page_title="Ghulam Murtaza | Professional Portfolio",
-    page_icon="GM",
-    layout="wide",
-    initial_sidebar_state="collapsed",
-)
+## Implementation Notes
 
-st.markdown(
-    """
-    <style>
-      html, body, [data-testid="stAppViewContainer"] {
-        margin: 0 !important;
-        padding: 0 !important;
-        background: #f8fafc !important;
-      }
-      [data-testid="stHeader"], [data-testid="stToolbar"], footer, #MainMenu {
-        display: none !important;
-        visibility: hidden !important;
-      }
-      .block-container {
-        padding: 0 !important;
-        margin: 0 !important;
-        max-width: 100% !important;
-      }
-      iframe {
-        display: block !important;
-        width: 100% !important;
-        border: 0 !important;
-      }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
-components.html(load_portfolio_html(), height=5200, scrolling=False)
+- The original HTML is stored in `index.html`.
+- The portrait image is stored in `assets/GM_Full.png`.
+- `app.py` renders the HTML through `streamlit.components.v1.html` to preserve the page styling and structure.
+- The local image path from the HTML was replaced with a repo-relative path, then injected as a data URI at runtime so it works reliably in Streamlit deployments.
+- External social icons are still loaded from their original external URLs.

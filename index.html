@@ -1,7 +1,1057 @@
-__pycache__/
-*.py[cod]
-.env
-.venv/
-venv/
-.streamlit/secrets.toml
-.DS_Store
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghulam Murtaza | Sindh Sales Tax Officer | Professional Portfolio</title>
+  <meta name="description" content="One-page professional portfolio of Mr. Ghulam Murtaza, Sindh Sales Tax Officer at Sindh Revenue Board, with sector exposure in insurance and construction taxation." />
+  <style>
+    :root {
+      --ink: #0f172a;
+      --muted: #475569;
+      --subtle: #64748b;
+      --line: rgba(15, 23, 42, 0.13);
+      --paper: #f8fafc;
+      --white: #ffffff;
+      --navy: #08172f;
+      --navy-2: #102a54;
+      --srb-green: #0f6b4f;
+      --emerald: #10b981;
+      --gold: #c28a21;
+      --gold-2: #f2c46d;
+      --blue: #2563eb;
+      --sky: #dbeafe;
+      --shadow-sm: 0 8px 24px rgba(15, 23, 42, 0.08);
+      --shadow-md: 0 18px 60px rgba(15, 23, 42, 0.14);
+      --shadow-lg: 0 30px 90px rgba(4, 15, 37, 0.28);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+      background:
+        radial-gradient(circle at top left, rgba(37,99,235,0.13), transparent 30rem),
+        radial-gradient(circle at 84% 12%, rgba(16,185,129,0.16), transparent 28rem),
+        linear-gradient(180deg, #f8fafc 0%, #eef4f7 50%, #f8fafc 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(15,23,42,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,23,42,0.035) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.65), transparent 72%);
+      z-index: 0;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      position: relative;
+      z-index: 1;
+    }
+
+    .topbar {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 24px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand-lockup {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+    }
+
+    .seal {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      border-radius: 50%;
+      background:
+        linear-gradient(135deg, var(--navy), var(--srb-green)),
+        radial-gradient(circle at 30% 20%, var(--gold-2), transparent 32%);
+      box-shadow: var(--shadow-sm);
+      font-size: 0.85rem;
+      font-weight: 900;
+    }
+
+    .nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .nav-pills span {
+      padding: 8px 12px;
+      border: 1px solid rgba(15,23,42,0.09);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.64);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 24px 26px;
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: calc(var(--radius) + 8px);
+      background:
+        linear-gradient(135deg, rgba(8,23,47,0.98), rgba(16,42,84,0.96) 54%, rgba(15,107,79,0.96)),
+        radial-gradient(circle at 90% 10%, rgba(242,196,109,0.32), transparent 22rem);
+      color: #fff;
+      padding: 42px;
+      box-shadow: var(--shadow-lg);
+      min-height: 624px;
+    }
+
+    .hero-card::before,
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(242,196,109,0.23), transparent 68%);
+      pointer-events: none;
+    }
+
+    .hero-card::before {
+      width: 420px;
+      height: 420px;
+      top: -150px;
+      right: -90px;
+    }
+
+    .hero-card::after {
+      width: 340px;
+      height: 340px;
+      bottom: -160px;
+      left: -130px;
+      background: radial-gradient(circle, rgba(16,185,129,0.26), transparent 70%);
+    }
+
+    .hero-inner { position: relative; z-index: 2; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 13px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.09);
+      color: #dff7ef;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      backdrop-filter: blur(14px);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold-2);
+      box-shadow: 0 0 0 6px rgba(242,196,109,0.14);
+    }
+
+    h1 {
+      margin: 24px 0 10px;
+      font-size: clamp(3.0rem, 7vw, 6.2rem);
+      line-height: 0.91;
+      letter-spacing: -0.08em;
+      font-weight: 950;
+      max-width: 720px;
+    }
+
+    .title-line {
+      margin: 0 0 24px;
+      color: #cce8df;
+      font-size: clamp(1.05rem, 1.7vw, 1.34rem);
+      font-weight: 650;
+      max-width: 720px;
+    }
+
+    .hero-summary {
+      margin: 0;
+      max-width: 720px;
+      color: #ecfdf5;
+      opacity: 0.94;
+      font-size: 1.02rem;
+    }
+
+    .contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #f8fafc;
+      font-size: 0.88rem;
+      font-weight: 720;
+      backdrop-filter: blur(12px);
+    }
+
+    .chip svg { width: 16px; height: 16px; opacity: 0.92; }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .impact {
+      min-height: 112px;
+      padding: 15px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.14);
+      backdrop-filter: blur(14px);
+    }
+
+    .impact strong {
+      display: block;
+      color: #fff;
+      font-size: clamp(1.22rem, 2vw, 1.75rem);
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    .impact span {
+      display: block;
+      margin-top: 8px;
+      color: #d7f7ee;
+      font-size: 0.78rem;
+      font-weight: 680;
+    }
+
+    .quote-card {
+      margin-top: 32px;
+      padding: 22px;
+      border-left: 4px solid var(--gold-2);
+      background: rgba(255,255,255,0.08);
+      border-radius: 0 16px 16px 0;
+      color: #f6fbff;
+    }
+
+    .quote-card p { margin: 0; font-size: 0.98rem; }
+
+    .portrait-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: calc(var(--radius) + 8px);
+      background: linear-gradient(180deg, #ffffff, #eef6f5);
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(15,23,42,0.08);
+      min-height: 624px;
+      display: grid;
+      grid-template-rows: 1fr auto;
+    }
+
+    .portrait-frame {
+      position: relative;
+      min-height: 520px;
+      background:
+        radial-gradient(circle at 78% 14%, rgba(194,138,33,0.16), transparent 14rem),
+        linear-gradient(135deg, rgba(37,99,235,0.07), rgba(16,185,129,0.11));
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 16px 18px 0;
+    }
+
+    .portrait-frame img {
+      display: block;
+      max-width: 100%;
+      width: 92%;
+      height: auto;
+      transform: translateY(-175px);
+      filter: drop-shadow(0 24px 42px rgba(15, 23, 42, 0.20));
+    }
+
+    .portrait-badge {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      right: 20px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      color: #fff;
+      background: rgba(8, 23, 47, 0.85);
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .portrait-badge b {
+      display: block;
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gold-2);
+    }
+
+    .portrait-badge span {
+      display: block;
+      margin-top: 4px;
+      font-weight: 750;
+      font-size: 1.02rem;
+    }
+
+    .portrait-footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border-top: 1px solid var(--line);
+    }
+
+    .mini-stat {
+      padding: 18px;
+      background: rgba(255,255,255,0.84);
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: 1.35rem;
+      letter-spacing: -0.045em;
+      color: var(--navy);
+    }
+
+    .mini-stat span {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 720;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .section-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 10px 24px 66px;
+    }
+
+    .section-title {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: end;
+      margin: 34px 0 18px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: clamp(1.55rem, 2.6vw, 2.55rem);
+      line-height: 1;
+      letter-spacing: -0.055em;
+      color: var(--navy);
+    }
+
+    .section-title .rule {
+      height: 2px;
+      background: linear-gradient(90deg, rgba(194,138,33,0.75), transparent);
+      transform: translateY(-7px);
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .panel {
+      position: relative;
+      background: rgba(255,255,255,0.86);
+      border: 1px solid rgba(15,23,42,0.09);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      padding: 24px;
+      overflow: hidden;
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--navy), var(--srb-green), var(--gold));
+    }
+
+    .panel h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 1.14rem;
+      letter-spacing: -0.025em;
+    }
+
+    .panel p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .feature-list li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      align-items: start;
+    }
+
+    .check {
+      width: 28px;
+      height: 28px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, var(--srb-green), var(--emerald));
+      font-weight: 900;
+      box-shadow: 0 8px 18px rgba(15,107,79,0.18);
+    }
+
+    .sector-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .sector-card {
+      min-height: 100%;
+      padding: 22px;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, #ffffff, rgba(239,246,255,0.68));
+      border: 1px solid rgba(15,23,42,0.09);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sector-card::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      right: -66px;
+      top: -72px;
+      border-radius: 50%;
+      background: rgba(16,185,129,0.13);
+    }
+
+    .sector-card:nth-child(2)::after { background: rgba(194,138,33,0.15); }
+
+    .sector-card .rank {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(8,23,47,0.08);
+      color: var(--navy);
+      font-size: 0.76rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .sector-card h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      letter-spacing: -0.035em;
+      font-size: 1.4rem;
+    }
+
+    .sector-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .sector-card ul {
+      margin: 16px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .sector-card li { margin-bottom: 8px; }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 14px;
+      padding-left: 6px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      bottom: 7px;
+      left: 18px;
+      width: 2px;
+      background: linear-gradient(var(--srb-green), var(--gold));
+      opacity: 0.5;
+    }
+
+    .timeline-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 12px;
+    }
+
+    .dot {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      background: var(--srb-green);
+      box-shadow: 0 0 0 1px rgba(15,107,79,0.22), var(--shadow-sm);
+      z-index: 1;
+    }
+
+    .timeline-body {
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(15,23,42,0.08);
+      background: rgba(255,255,255,0.76);
+    }
+
+    .timeline-body .time {
+      color: var(--gold);
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+    }
+
+    .timeline-body h3 {
+      margin: 2px 0 5px;
+      font-size: 1.02rem;
+      color: var(--navy);
+    }
+
+    .timeline-body p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+
+    .competency-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .competency {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.86);
+      border: 1px solid rgba(15,23,42,0.08);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .icon-box {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, rgba(15,107,79,0.11), rgba(37,99,235,0.10));
+      color: var(--srb-green);
+      font-weight: 950;
+    }
+
+    .competency h3 {
+      margin: 0 0 6px;
+      color: var(--navy);
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .competency p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 20px;
+    }
+
+    .credential {
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(15,23,42,0.09);
+    }
+
+    .credential:first-child { padding-top: 0; }
+    .credential:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    .credential .meta {
+      color: var(--gold);
+      font-size: 0.76rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+    }
+
+    .credential h3 {
+      margin: 3px 0 5px;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+
+    .credential p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      padding: 9px 11px;
+      border-radius: 999px;
+      background: rgba(15,107,79,0.08);
+      color: var(--navy);
+      font-size: 0.82rem;
+      font-weight: 750;
+      border: 1px solid rgba(15,107,79,0.12);
+    }
+
+    .research-card {
+      display: grid;
+      gap: 10px;
+    }
+
+    .research-line {
+      padding: 13px 15px;
+      border-radius: 14px;
+      background: rgba(248,250,252,0.9);
+      border: 1px solid rgba(15,23,42,0.07);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-cta {
+      margin-top: 28px;
+      padding: 28px;
+      border-radius: calc(var(--radius) + 6px);
+      background:
+        linear-gradient(135deg, rgba(8,23,47,0.98), rgba(15,107,79,0.94)),
+        radial-gradient(circle at top right, rgba(242,196,109,0.22), transparent 18rem);
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      box-shadow: var(--shadow-md);
+    }
+
+    .footer-cta h2 {
+      margin: 0 0 6px;
+      letter-spacing: -0.04em;
+      line-height: 1.04;
+    }
+
+    .footer-cta p {
+      margin: 0;
+      color: #dff7ef;
+      max-width: 1000px;
+    }
+
+    
+    .print-note {
+      margin: 16px auto 0;
+      max-width: var(--max);
+      padding: 0 24px 24px;
+      color: var(--subtle);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+
+    @media (max-width: 980px) {
+      .hero, .content-grid, .education-grid { grid-template-columns: 1fr; }
+      .hero-card, .portrait-card { min-height: auto; }
+      .impact-grid { grid-template-columns: repeat(2, 1fr); }
+      .sector-grid, .competency-grid { grid-template-columns: 1fr; }
+      .footer-cta { grid-template-columns: 1fr; }
+      .btn-row { justify-content: flex-start; }
+      .topbar { align-items: flex-start; flex-direction: column; }
+      .nav-pills { justify-content: flex-start; }
+    }
+
+    @media (max-width: 640px) {
+      .hero, .section-wrap, .topbar { padding-left: 16px; padding-right: 16px; }
+      .hero-card { padding: 30px 24px; border-radius: 24px; }
+      .impact-grid, .portrait-footer { grid-template-columns: 1fr; }
+      .section-title { grid-template-columns: 1fr; }
+      .section-title .rule { display: none; }
+      .contact-strip { flex-direction: column; align-items: stretch; }
+      .chip { justify-content: flex-start; }
+      h1 { letter-spacing: -0.065em; }
+    }
+
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar" aria-label="Portfolio header">
+      <div class="brand-lockup">
+        <div class="seal" aria-hidden="true">GM</div>
+        <div>
+          <div>Professional Portfolio</div>
+          <small style="color:#64748b;font-weight:750;letter-spacing:0.02em;">Sindh Revenue Board • Taxation • Compliance • Assessment</small>
+        </div>
+      </div>
+      <div class="nav-pills" aria-label="Core positioning">
+        <span>Insurance Taxation</span>
+        <span>Construction Sector</span>
+        <span>Legal Drafting</span>
+        <span>Revenue Recovery</span>
+      </div>
+    </header>
+
+    <section class="hero" aria-label="Profile hero">
+      <article class="hero-card">
+        <div class="hero-inner">
+          <div class="eyebrow">Sindh Sales Tax Officer</div>
+          <h1>Ghulam<br/>Murtaza</h1>
+          <p class="title-line">High-performing Taxation, Compliance, Assessment, Recovery and Appellate Support Professional serving the Sindh Revenue Board.</p>
+          <p class="hero-summary">
+            Mr. Ghulam Murtaza combines formal education MS Economics and BBA Marketing with field exposure across regulated and high-volume tax sectors. Since joining SRB in May 2025, he has developed a reputation for disciplined case handling, precise legal understanding, professional presentation and practical revenue execution.
+          </p>
+
+          <div class="contact-strip" aria-label="Contact information">
+            <a class="chip" href="tel:+923032005206" aria-label="Call Ghulam Murtaza">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 19 19.5 19.5 0 0 1 5 12.81 19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.98.35 1.93.66 2.84a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6.09 6.09l1.24-1.27a2 2 0 0 1 2.11-.45c.91.31 1.86.53 2.84.66A2 2 0 0 1 22 16.92z"/></svg>
+              +92 303 2005206
+            </a>
+            <a class="chip" href="mailto:murtaza.soomro7861@gmail.com" aria-label="Email Ghulam Murtaza">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+              murtaza.soomro7861@gmail.com
+            </a>
+            <span class="chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Karachi, Sindh
+            </span>
+          </div>
+
+          <div class="impact-grid" aria-label="Professional highlights">
+            <div class="impact"><strong>VAT Expert</strong><span>Legal & Judicial Expertise in Sales Tax</span></div>
+            <div class="impact"><strong>PKR 65M+</strong><span>Secured through Direct Recoveries from Bank Attachments</span></div>
+            <div class="impact"><strong>32,000+</strong><span>Taxpayer Base exposure in Construction Sector Management</span></div>
+            <div class="impact"><strong>2026</strong><span>Developed and Delivered lectures for Newly Appointed SRB Officers</span></div>
+          </div>
+
+          <div class="quote-card">
+            <p><strong>Professional positioning:</strong> A presentable, detail-oriented and legally grounded officer with sector depth, compliance discipline and strong written representation skills before appellate forums.</p>
+          </div>
+        </div>
+      </article>
+
+      <aside class="portrait-card" aria-label="Profile portrait">
+        <div class="portrait-frame">
+          <img src="assets/GM_Full.png" alt="Professional portrait of Mr. Ghulam Murtaza" />
+          <div class="portrait-badge">
+            <b>Formal • Regulated • Field-Tested</b>
+            <span>Tax Officer with Insurance, Construction, Assessment and Compliance Exposure.</span>
+          </div>
+        </div>
+        <div class="portrait-footer">
+          <div class="mini-stat"><strong>Sindh Revenue Board</strong><span>Current Institution</span></div>
+          <div class="mini-stat"><strong>Sindh Sales Tax on Services Act, 2011</strong><span>Legal Knowledge Base</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section-wrap">
+      <section class="footer-cta" aria-label="Closing professional statement">
+        <div>
+          <h2>Let's Connect</h2>
+            <body><a href="https://github.com/itsghmurtaza">
+              <img src="https://img.icons8.com/fluent/50/000000/github.png" alt="GitHub" style="width: 50px; height: 50px;">
+            </a>
+
+            <a href="https://www.linkedin.com/in/murtaza-s-088b211a7/">
+              <img src="https://img.icons8.com/color/50/000000/linkedin--v2.png" alt="LinkedIn" style="width: 50px; height: 50px;">
+            </a>
+
+            <a href="https://web.whatsapp.com/send?phone=923032005206">
+              <img src="https://img.icons8.com/color/50/000000/whatsapp--v2.png" alt="WhatsApp" style="width: 50px; height: 50px;">
+            </a>
+
+            <a href="https://www.youtube.com/@murtaza696">
+              <img src="https://img.icons8.com/color/50/000000/youtube-play.png" alt="YouTube" style="width: 50px; height: 50px;">
+            </a>
+
+            <a href="https://www.facebook.com/murtaza.soomro786ref">
+              <img src="https://img.icons8.com/color/50/000000/facebook-new--v2.png" alt="Facebook" style="width: 50px; height: 50px;">
+            </a>
+
+            <a href="https://www.instagram.com/itsghmurtaza">
+              <img src="https://img.icons8.com/color/50/000000/instagram-new--v2.png" alt="Instagram" style="width: 50px; height: 50px;">
+            </a>
+
+            </body>
+        </div>
+
+      </section>
+      <div class="section-title">
+        <h2>Executive Profile</h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="content-grid">
+        <article class="panel">
+          <h3>Professional Narrative</h3>
+          <p>
+            Mr. Ghulam Murtaza is a Sindh Sales Tax Officer with a rare blend of field recovery experience, legal drafting, taxpayer-facing communication skills and sector-specific assessment exposure. His prior work at Ahsan Associates strengthened client handling, office operations, documentation and stakeholder coordination; his current SRB role has converted that foundation into revenue administration, compliance monitoring and case-based public-sector execution.
+          </p>
+          <p>
+            His strength lies in combining patience with structure. In formal sectors, he can work through financial statements and regulated compliance questions; in informal and high-volume sectors, he can prioritize cases, activate non-filers, deploy recovery mechanisms and use resources efficiently.
+          </p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span><span><strong>Legal precision:</strong> trained on the Sindh Sales Tax Act, 2011 and able to apply statutory understanding in assessments, compliance issues and appellate drafting.</span></li>
+            <li><span class="check">✓</span><span><strong>Appellate support:</strong> recognized for detailed paragraph-wise comments for Commissioner Appeals and Tribunal matters.</span></li>
+            <li><span class="check">✓</span><span><strong>Professional polish:</strong> highly presentable, well-dressed and effective in formal stakeholder environments.</span></li>
+          </ul>
+        </article>
+
+        <aside class="panel">
+          <h3>Career Timeline</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="dot"></div>
+              <div class="timeline-body">
+                <div class="time">2025 — Present</div>
+                <h3>Sindh Revenue Board — Sindh Sales Tax Officer</h3>
+                <p>Completed SRB training, cleared final passing-out examination and moved into sectoral taxation, compliance, assessment and recovery responsibilities.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="dot" style="background:var(--gold);"></div>
+              <div class="timeline-body">
+                <div class="time">Aug 2022 — May 2025</div>
+                <h3>Ahsan Associates — Paralegal Assistant (Tax & Fiscal Laws)</h3>
+                <p>Handled client relationships, daily operations, correspondence, documentation, record keeping and office coordination.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="dot" style="background:var(--blue);"></div>
+              <div class="timeline-body">
+                <div class="time">2020 — 2022</div>
+                <h3>State Bank of Pakistan & CF-Sol Technologies</h3>
+                <p>Gained exposure to Islamic banking, regulatory research, presentations, performance marketing, reporting and payroll-related operational work.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="section-title">
+        <h2>Sectoral Exposure</h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="sector-grid">
+        <article class="sector-card">
+          <span class="rank">Insurance Sector • Fifth-largest SRB revenue generator</span>
+          <h3>Regulated Taxation & Financial Statement Assessment</h3>
+          <p>
+            In insurance, Mr. Murtaza worked with a formal and regulated taxpayer environment involving local and international insurance companies operating in Sindh.
+          </p>
+          <ul>
+            <li>Looked after taxation, compliance, assessment and sector-specific complications.</li>
+            <li>Reviewed financial statements of large insurance companies for assessment-oriented work.</li>
+            <li>Gained exposure to High Court-linked matters in a legally sensitive and regulated environment.</li>
+            <li>Built understanding of formal taxpayer behavior, documentation standards and compliance pathways.</li>
+          </ul>
+        </article>
+
+        <article class="sector-card">
+          <span class="rank">Construction Sector • Third-largest revenue sector</span>
+          <h3>High-Volume Compliance, Recovery & Non-Filer Activation</h3>
+          <p>
+            In construction, he entered a more informal and operationally demanding sector with approximately 32,000 taxpayers and a need for resource-efficient execution.
+          </p>
+          <ul>
+            <li>Helped secure approximately PKR 65 million through direct recoveries from bank attachments.</li>
+            <li>Supported further revenue realization through compliance follow-ups and taxpayer activation.</li>
+            <li>Managed activation cases of non-filers for the unit.</li>
+            <li>Applied patience, smart prioritization and practical field judgment in a busy environment.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="section-title">
+        <h2>Core Competencies</h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="competency-grid">
+        <div class="competency"><div class="icon-box">01</div><h3>Tax Compliance Management</h3><p>Monitoring taxpayers, following compliance gaps, activating non-filers and translating legal requirements into operational action.</p></div>
+        <div class="competency"><div class="icon-box">02</div><h3>Assessment Support</h3><p>Reviewing records and financial statements, especially in formal sectors where documentation quality and legal interpretation matter.</p></div>
+        <div class="competency"><div class="icon-box">03</div><h3>Recovery Execution</h3><p>Supporting recoveries through bank attachments and structured follow-up to protect public revenue.</p></div>
+        <div class="competency"><div class="icon-box">04</div><h3>Appellate Drafting</h3><p>Preparing paragraph-wise comments and structured legal responses for Commissioner Appeals and Tribunal matters.</p></div>
+        <div class="competency"><div class="icon-box">05</div><h3>Stakeholder Communication</h3><p>Strong client-facing and taxpayer-facing communication built through prior business administration and current public-sector exposure.</p></div>
+        <div class="competency"><div class="icon-box">06</div><h3>VAT New Issues</h3><p>Identified new issue that was untaxed since July, 2011. This added surplus into the provincial revenue base.</p></div>
+      </div>
+
+
+      <div class="section-title">
+        <h2>Professional Training Delivery</h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="competency-grid">
+        <div class="competency"><div class="icon-box">01</div><h3>Curriculums Design</h3><p>Designed the curriculum for the tax compliance training program, in the light of Consitution, Civil, Criminal and Tax Laws.</p></div>
+        <div class="competency"><div class="icon-box">02</div><h3>Corporate Trainings</h3><p>Conducted regular training sessions for New Inductees on tax compliance and regulatory updates.</p></div>
+        <div class="competency"><div class="icon-box">03</div><h3>Boardroom Presentations</h3><p>Presented financial and tax-related insights to senior management and board members.</p></div>
+        <div class="competency"><div class="icon-box">04</div><h3>Legal Representation</h3><p>Provided legal support and representation in tax-related disputes and appeals.</p></div>
+        <div class="competency"><div class="icon-box">05</div><h3>Outcome Management</h3><p>Managed the implementation and evaluation of training programs to ensure desired outcomes.</p></div>
+        <div class="competency"><div class="icon-box">06</div><h3>Fiscal Policy Analysis</h3><p>Conducted research and analysis on fiscal policies and their impact on revenue generation.</p></div>
+      </div>
+
+
+
+      <div class="section-title">
+        <h2>Education, Research & Professional Base</h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="education-grid">
+        <article class="panel">
+          <h3>Academic Credentials</h3>
+          <div class="credential">
+            <div class="meta">SZABIST Karachi • Graduation: Jan 2026</div>
+            <h3>MS Economics</h3>
+            <p>Relevant coursework includes Advanced Research Methods, Adv. Macroeconomics, Adv. Microeconomics, Econometrics, Financial Time Series and Labor Economics.</p>
+          </div>
+          <div class="credential">
+            <div class="meta">SZABIST Karachi • Graduation: Sep 2023</div>
+            <h3>Bachelor of Business Administration</h3>
+            <p>Placed 3rd in ACE 9.0 — Accelerating Corporate Efficiency challenge on Occupational Health and Safety in Covid.</p>
+          </div>
+          <div class="credential">
+            <div class="meta">Certification</div>
+            <h3>TOEFL — Score 92</h3>
+            <p>Speaking 27/30, Writing 25/30, Listening 21/30, Reading 19/30.</p>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3>Research Orientation</h3>
+          <p>His economics background supports structured analysis, evidence-based thinking and professional written work in compliance and assessment contexts.</p>
+          <div class="research-card">
+            <div class="research-line"><strong>Brain Drain:</strong> Assessing the influence of economic indicators on Pakistan’s brain drain over the last two decades.</div>
+            <div class="research-line"><strong>Migration Intention:</strong> Qualitative study of social, political, economic and individual factors influencing decision making.</div>
+            <div class="research-line"><strong>Entrepreneurship:</strong> Effect of economic instability on entrepreneurs in Pakistan.</div>
+            <div class="research-line"><strong>Capital Markets:</strong> Effect of Foreign Portfolio Investment on stock market liquidity in Pakistan.</div>
+          </div>
+          <div class="tag-cloud" aria-label="Skills">
+            <span class="tag">Quantitative Research</span>
+            <span class="tag">Statistical Analysis</span>
+            <span class="tag">Professional Writing</span>
+            <span class="tag">Report Preparation</span>
+            <span class="tag">Presentation</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">Business Communication</span>
+            <span class="tag">Stakeholder Engagement</span>
+          </div>
+        </article>
+      </div>
+
+      <section class="footer-cta" aria-label="References">
+        <div>
+          <h2>References.</h2>
+<!---
+          <p>
+            Syed Murad Ali Shah, Chief Minister, Sindh — Karachi
+            <a href="https://web.whatsapp.com/send?phone=923008210080?text=Hi%2C%0AI%20am%20sure%20you%20are%20doing%20great.%20We%20intent%20to%20know%20more%20about%20Mr.%20Ghulam%20Murtaza%20Soomro%2C%20who%20has%20mentioned%20you%20as%20his%20reference%20in%20his%20portfolio%20www.i-am-gmsoomro.streamlit.app.%0AAn%20earlier%2 would%2 highly%2 appreciated.%0A%0ARegards." target="_blank" style="color:inherit;text-decoration:underline;">+92 300 8210080</a>
+            |
+            <a href="mailto:muradalishah@gmail.com" style="color:inherit;text-decoration:underline;">muradalishah@gmail.com</a>
+          </p>
+          <p>
+            Mr. Tariq Hussain Tunio, Head - Legal HR, Federal Board of Revenue — Islamabad
+            <a href="https://web.whatsapp.com/send?phone=923322130867?text=Hi%20Tariq%2C%0AI%20am%20sure%20you%20are%20doing%20great.%20We%20intent%20to%20know%20more%20about%20Mr.%20Ghulam%20Murtaza%20Soomro%2C%20who%20has%20mentioned%20you%20as%20his%20reference%20in%20his%20portfolio%20www.i-am-gmsoomro.streamlit.app.%0AAn%20earlier%2 would%2 highly%2 appreciated.%0A%0ARegards." target="_blank" style="color:inherit;text-decoration:underline;">+92 332 2130867</a>
+            |
+            <a href="mailto:muradalishah@gmail.com" style="color:inherit;text-decoration:underline;">muradalishah@gmail.com</a>          </p>
+          <p>
+            Mr. Hassan Absar Qaimkhani, Former Fractional CFO — Abu Dhabi
+            <a href="https://web.whatsapp.com/send?phone=923292909992?text=Hi%20Hassan%2C%0AI%20am%20sure%20you%20are%20doing%20great.%20We%20intent%20to%20know%20more%20about%20Mr.%20Ghulam%20Murtaza%20Soomro%2C%20who%20has%20mentioned%20you%20as%20his%20reference%20in%20his%20portfolio%20www.i-am-gmsoomro.streamlit.app.%0AAn%20earlier%20response%20would%20be%20highly%2 appreciated.%0A%0ARegards." target="_blank" style="color:inherit;text-decoration:underline;">+92 329 2909992</a>
+            |
+            <a href="mailto:hassanabsarqaimkhani@gmail.com" style="color:inherit;text-decoration:underline;">hassanabsarqaimkhani@gmail.com</a>          </p>
+-->
+        </div>
+      </section>
+    </section>
+
+    <p class="print-note">© 2026 Ghulam Murtaza Soomro</p>
+  </main>
+</body>
+</html>
