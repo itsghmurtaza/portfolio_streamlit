@@ -63,4 +63,4 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-components.html(load_portfolio_html(), height=4800, scrolling=True)
+components.html(load_portfolio_html(), height=4400, scrolling=True)
